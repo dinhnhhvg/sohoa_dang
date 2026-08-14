@@ -1,0 +1,69 @@
+Cac cau lenh trung:
+
+1, Cau lenh tao bang va model
+    php artisan make:model Name --migration
+
+    mysql 8
+    PHP 8.2
+    redit
+
+    tesseract - Dung cho viec chuyen pdf thanh pdf 2 lop
+        sudo apt install -y \
+        tesseract-ocr \
+        ocrmypdf \
+        tesseract-ocr-vie \
+        tesseract-ocr-eng \
+        tesseract-ocr-fra \
+        tesseract-ocr-rus \
+        tesseract-ocr-chi-sim \
+        tesseract-ocr-chi-tra
+
+        sudo apt install jbig2enc
+
+
+
+
+Cac phan can cai tren serve:
+    sudo apt install poppler-utils
+    Cai redit va dat mat khau cho no
+
+
+Cac extension can cai them:
+    composer require laravel/reverb
+    composer require predis/predis
+
+
+
+Cau lenh run:
+    // Run web
+    php artisan serve
+    // Run socket
+    php artisan reverb:start
+    // Run queue
+    php artisan queue:work redis --timeout=0 --tries=3
+
+
+Cac cau lenh tao du an
+
+1, Tao du an:
+    composer create-project laravel/laravel:^10.0 Basic
+2, Tao bang:
+    php artisan migrate
+3, Tao du lieu ban dau:
+    php artisan db:seed
+
+
+
+ALTER TABLE judgments DROP INDEX judgments_folder_path_unique;
+ALTER TABLE judgment_documents DROP INDEX judgment_documents_file_path_unique;
+
+
+
+
+
+
+
+
+
+
+

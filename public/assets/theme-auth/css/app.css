@@ -1,0 +1,28 @@
+body {
+    height: 100%;;
+}
+body footer {
+    bottom: 0;
+    right: 0
+}
+body img.img-250 {
+    width: 250px;
+    height: auto
+}
+body img.img-150 {
+    width: 150px;
+    height: auto
+}
+body a.a-link-login {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px 0;
+    text-decoration: none;
+}
+a.a-link-login.border-primary:hover {
+    background-color: #00BD9D;
+    color: white !important;
+}
