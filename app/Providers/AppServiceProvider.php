@@ -13,7 +13,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(
+            \UniSharp\LaravelFilemanager\LfmItem::class,
+            \App\Lfm\LfmItem::class
+        );
     }
 
     /**
