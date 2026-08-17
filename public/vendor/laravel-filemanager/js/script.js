@@ -619,8 +619,7 @@ function preview(items) {
 
     items.forEach(function (item, index) {
         var carouselItem = imageTemplate.clone().addClass(index === 0 ? 'active' : '');
-        window.console.log(item.icon);
-        if (item.icon === 'pdf' || item.icon === 'PDF') {
+        if (item.icon === 'pdf') {
             carouselItem.find('.carousel-image').css({
                 width: '100%',
                 height: 'calc(95vh - 50px)',
