@@ -88,9 +88,6 @@ class JudgmentService extends BaseService
         $data['languages'] = $this->languageRepository->get();
         $data['statuses'] = $this->statusRepository->getActiveByModule('judgment');
         $data['physicalConditions'] = $this->configRepository->getByModule('physical_condition');
-        $data['tenurePeriods'] = $this->configRepository->getByModule('tenure_period');
-        $data['retentionPeriods'] = $this->configRepository->getByModule('retention_period');
-        $data['fonts'] = $this->configRepository->getByModule('font');
         return $data;
     }
 

@@ -17,6 +17,22 @@
         <div class="accordion" id="accordionJD">
             <div class="accordion-item mb-2">
                 <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionJD-folderInfo">
+                        <span class="title m-0">THÔNG TIN HỒ SƠ (BÌA)</span>
+                    </button>
+                </h2>
+                <div id="accordionJD-folderInfo" class="accordion-collapse collapse" data-bs-parent="#accordionJD">
+                    <div class="accordion-body">
+                        @include(env('APP_VIEW_PATH_ADMIN').'.batch.judgment_document.edit.folder_info')
+                    </div>
+                    <div class="accordion-footer border-top mt-2">
+                        <button class="accordion-button collapsed p-3" style="min-height: auto;" type="button" data-bs-toggle="collapse" data-bs-target="#accordionJD-folderInfo" aria-expanded="true"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item mb-2">
+                <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionJD-fileInfo">
                         <span class="title m-0">{{ __('app.information') }} {{ __('app.file') }}</span>
                     </button>
@@ -66,7 +82,24 @@
                 @endforeach
             </select>
         </div>
+
         <div class="accordion" id="accordionJD">
+            <div class="accordion-item mb-2">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionJD-folderInfo">
+                        <span class="title m-0">THÔNG TIN HỒ SƠ (BÌA)</span>
+                    </button>
+                </h2>
+                <div id="accordionJD-folderInfo" class="accordion-collapse collapse" data-bs-parent="#accordionJD">
+                    <div class="accordion-body">
+                        @include(env('APP_VIEW_PATH_ADMIN').'.batch.judgment_document.edit.folder_info')
+                    </div>
+                    <div class="accordion-footer border-top mt-2">
+                        <button class="accordion-button collapsed p-3" style="min-height: auto;" type="button" data-bs-toggle="collapse" data-bs-target="#accordionJD-folderInfo" aria-expanded="true"></button>
+                    </div>
+                </div>
+            </div>
+
             <div class="accordion-item mb-2">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionJD-fileInfo">

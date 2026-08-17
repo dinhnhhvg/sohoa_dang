@@ -400,7 +400,7 @@
 
     setTimeout(function () {
         showPdfFile('{{ request('working_file_name') }}')
-    }, 500);
+    }, 800);
 
     function showPdfFile(file_name) {
         if (!file_name) return;
