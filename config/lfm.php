@@ -175,6 +175,7 @@ return [
         'webm' => 'Video',
 
         'pdf'  => 'Adobe Acrobat',
+        'PDF'  => 'Adobe Acrobat',
         'doc'  => 'Microsoft Word',
         'docx' => 'Microsoft Word',
         'xls'  => 'Microsoft Excel',
@@ -207,7 +208,7 @@ return [
         'word'  => ['doc', 'docx'],
         'excel' => ['xls', 'xlsx'],
         'powerpoint' => ['pptx', 'ppt', 'ppsx', 'pps', 'potx', 'pot'],
-        'pdf'   => ['pdf'],
+        'pdf'   => ['pdf', 'PDF'],
         'image' => ['jpg', 'jpeg', 'png', 'gif', 'webp'],
         'video' => ['mp4', 'webm'],
         'text'  => ['txt'],
