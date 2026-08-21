@@ -18,7 +18,7 @@
 
         <div class="col-md-12">
             <div class="form-group mb-3">
-                <label class="form-label">{{ __('app.document_notation') }}<span class="text-danger">*</span></label>
+                <label class="form-label">{{ __('app.document_notation') }}</label>
                 <input type="text" class="form-control" name="document_notation" value="{{ $judgmentDocument->document_notation }}" placeholder="{{ __('app.entry') }}">
             </div>
         </div>

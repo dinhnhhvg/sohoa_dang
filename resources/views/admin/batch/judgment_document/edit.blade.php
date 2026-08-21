@@ -195,7 +195,7 @@
     }
 
     function saveAll(e) {
-        $(e).parent().parent().find('form').each(function () {
+        $(e).parent().parent().parent().find('form').each(function () {
             $(this).find('button[type="submit"]').trigger('click');
         });
     }

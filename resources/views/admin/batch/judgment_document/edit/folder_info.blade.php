@@ -31,14 +31,14 @@
 
         <div class="col-md-12">
             <div class="form-group mb-3">
-                <label class="form-label">{{ __('app.box_number') }}</label>
+                <label class="form-label">{{ __('app.box_number') }}<span class="text-danger">*</span></label>
                 <input type="text" class="form-control" name="box_number" value="{{ $judgment->box_number ?: ($folderPathArray[1] ?? '') }}" placeholder="{{ __('app.enter_value') }}">
             </div>
         </div>
 
         <div class="col-md-12">
             <div class="form-group mb-3">
-                <label class="form-label">{{ __('app.dossier_number') }}</label>
+                <label class="form-label">{{ __('app.dossier_number') }}<span class="text-danger">*</span></label>
                 <input type="text" class="form-control" name="dossier_number" value="{{ $judgment->dossier_number ?? ($folderPathArray[0] ?? '') }}" placeholder="{{ __('app.enter_value') }}">
             </div>
         </div>

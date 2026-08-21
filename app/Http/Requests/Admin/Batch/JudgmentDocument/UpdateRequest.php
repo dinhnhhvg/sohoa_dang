@@ -19,7 +19,7 @@ class UpdateRequest extends BaseRequest
             'agency_name' => 'sometimes|nullable|string',
             'note' => 'sometimes|nullable|string',
             'document_number' => 'sometimes|nullable|string',
-            'document_notation' => 'sometimes|required|string',
+            'document_notation' => 'sometimes|nullable|string',
             'issue_date' => 'sometimes|nullable|date_format:d/m/Y',
             'document_genre_id' => 'sometimes|required|integer|exists:configs,id',
             'content_summary' => 'sometimes|nullable|string',
