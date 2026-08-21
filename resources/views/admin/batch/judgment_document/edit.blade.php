@@ -199,4 +199,16 @@
             $(this).find('button[type="submit"]').trigger('click');
         });
     }
+
+    function selectNextOption(e) {
+        let s = $(e).closest('.modal-body').find('select[name="jd_id"]').first();
+        let o = s.find('option:selected');
+        let n = o.next('option');
+        if (n.length > 0) {
+            n.prop('selected', true);
+            s.trigger('change');
+        } else {
+            $(e).remove();
+        }
+    }
 </script>

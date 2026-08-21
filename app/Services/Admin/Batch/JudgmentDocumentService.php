@@ -137,7 +137,7 @@ class JudgmentDocumentService extends BaseService
 
     public function update(string|int $id, Request $request): array|bool|null
     {
-        $updateData = $this->handleFormatDate($request->validated(), ['issued_date']);
+        $updateData = $this->handleFormatDate($request->validated(), ['issue_date']);
         unset($updateData['language_id']);
 
         $this->judgmentDocumentRepository->update($id, $updateData);

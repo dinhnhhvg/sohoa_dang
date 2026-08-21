@@ -7,7 +7,6 @@
                 <label class="form-label">{{ __('app.agency') }}</label>
                 <select class="form-select select2 mb-2" name="old_agency_id" data-placeholder="{{ __('app.select_agency') }}">
                     @php $old_agency_id = $judgmentDocument->old_agency_id ?: $judgmentDocument->judgment->batch->old_agency_id @endphp
-                    <option></option>
                     @foreach($oldAgencies as $oldAgency)
                         <option value="{{ $oldAgency->id }}" {{ $old_agency_id == $oldAgency->id ? 'selected' : '' }}>
                             {{ renderCodeName($oldAgency) }}
@@ -26,7 +25,7 @@
 
         <div class="col-md-12">
             <div class="form-group mb-3">
-                <label class="form-label">{{ __('app.document_notation') }}</label>
+                <label class="form-label">{{ __('app.document_notation') }}<span class="text-danger">*</span></label>
                 <input type="text" class="form-control" name="document_notation" value="{{ $judgmentDocument->document_notation }}" placeholder="{{ __('app.entry') }}">
             </div>
         </div>
@@ -43,9 +42,8 @@
 
         <div class="col-md-12">
             <div class="form-group mb-3">
-                <label class="form-label">{{ __('app.document_genre') }}</label>
+                <label class="form-label">{{ __('app.document_genre') }}<span class="text-danger">*</span></label>
                 <select class="form-select select2 mb-2" name="document_genre_id" data-placeholder="{{ __('app.select') }}">
-                    <option></option>
                     @foreach($documentGenres as $documentGenre)
                         <option value="{{ $documentGenre->id }}" {{ $documentGenre->id == $judgmentDocument->document_genre_id ? 'selected' : '' }}>
                             {{ renderCodeName($documentGenre) }}
@@ -73,7 +71,6 @@
             <div class="form-group mb-3">
                 <label class="form-label">{{ __('app.confidentiality_level') }}</label>
                 <select class="form-select select2 mb-2" name="confidentiality_level_id" data-placeholder="{{ __('app.select') }}">
-                    <option></option>
                     @foreach($confidentialityLevels as $confidentialityLevel)
                         <option value="{{ $confidentialityLevel->id }}" {{ $confidentialityLevel->id == $judgmentDocument->confidentiality_level_id ? 'selected' : '' }}>
                             {{ $confidentialityLevel->name }}
@@ -87,7 +84,6 @@
             <div class="form-group mb-3">
                 <label class="form-label">{{ __('app.copy_type') }}</label>
                 <select class="form-select select2 mb-2" name="copy_type_id" data-placeholder="{{ __('app.select') }}">
-                    <option></option>
                     @foreach($copyTypes as $copyType)
                         <option value="{{ $copyType->id }}" {{ $copyType->id == $judgmentDocument->copy_type_id ? 'selected' : '' }}>
                             {{ $copyType->name }}
@@ -150,7 +146,6 @@
             <div class="form-group mb-3">
                 <label class="form-label">{{ __('app.usage_mode') }}</label>
                 <select class="form-select select2 mb-2" name="usage_mode_id" data-placeholder="{{ __('app.select') }}">
-                    <option></option>
                     @foreach($usageModes as $usageMode)
                         <option value="{{ $usageMode->id }}" {{ $usageMode->id == $judgmentDocument->usage_mode_id ? 'selected' : '' }}>
                             {{ $usageMode->name }}

@@ -7,8 +7,8 @@
                 @foreach($jds as $jd)
                     <option value="{{ $jd->href }}" {{ $jd->id == $judgmentDocument->id ? 'selected' : '' }}>
                         {{ getEndName($jd->file_path) }}
-                        @if($jd->document_type_id)
-                            ({{ __('app.entry') }})
+                        @if($jd->document_genre_id)
+                            (v)
                         @endif
                     </option>
                 @endforeach
@@ -63,8 +63,13 @@
                 </div>
             </div>
 
-            <div>
-                <button type="button" class="btn btn-primary w-100 mt-2" onclick="saveAll(this)">{{ __('app.save_all') }}</button>
+            <div class="row">
+                <div class="col-6">
+                    <button type="button" class="btn btn-primary w-100 mt-2" onclick="saveAll(this)">{{ __('app.save_all') }}</button>
+                </div>
+                <div class="col-6">
+                    <button type="button" class="btn btn-warning w-100 mt-2" onclick="selectNextOption(this)">{{ __('app.next') }}</button>
+                </div>
             </div>
         </div>
     </div>
@@ -75,8 +80,8 @@
                 @foreach($jds as $jd)
                     <option value="{{ $jd->href }}" {{ $jd->id == $judgmentDocument->id ? 'selected' : '' }}>
                         {{ getEndName($jd->file_path) }}
-                        @if($jd->document_type_id)
-                            ({{ __('app.entry') }})
+                        @if($jd->document_genre_id)
+                            (v)
                         @endif
                     </option>
                 @endforeach
@@ -132,8 +137,13 @@
                 </div>
             </div>
 
-            <div>
-                <button type="button" class="btn btn-primary w-100 mt-2" onclick="saveAll(this)">{{ __('app.save_all') }}</button>
+            <div class="row">
+                <div class="col-6">
+                    <button type="button" class="btn btn-primary w-100 mt-2" onclick="saveAll(this)">{{ __('app.save_all') }}</button>
+                </div>
+                <div class="col-6">
+                    <button type="button" class="btn btn-warning w-100 mt-2" onclick="selectNextOption(this)">{{ __('app.next') }}</button>
+                </div>
             </div>
         </div>
     </div>

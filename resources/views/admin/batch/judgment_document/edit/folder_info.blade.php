@@ -1,4 +1,8 @@
-@php $judgment = $judgmentDocument->judgment @endphp
+@php
+    $judgment = $judgmentDocument->judgment;
+    $folderPathArray = explode('/', $judgment->folder_path);
+    $folderPathArray = array_reverse($folderPathArray);
+@endphp
 
 <form method="POST" action="{{ route('admin.judgment.update', ['judgment' => $judgment->id]) }}"
       onsubmit="commonSubmit(this, false, false); return false" enctype="multipart/form-data">
@@ -28,14 +32,14 @@
         <div class="col-md-12">
             <div class="form-group mb-3">
                 <label class="form-label">{{ __('app.box_number') }}</label>
-                <input type="text" class="form-control" name="box_number" value="{{ $judgment->box_number }}" placeholder="{{ __('app.enter_value') }}">
+                <input type="text" class="form-control" name="box_number" value="{{ $judgment->box_number ?: ($folderPathArray[1] ?? '') }}" placeholder="{{ __('app.enter_value') }}">
             </div>
         </div>
 
         <div class="col-md-12">
             <div class="form-group mb-3">
                 <label class="form-label">{{ __('app.dossier_number') }}</label>
-                <input type="text" class="form-control" name="dossier_number" value="{{ $judgment->dossier_number }}" placeholder="{{ __('app.enter_value') }}">
+                <input type="text" class="form-control" name="dossier_number" value="{{ $judgment->dossier_number ?? ($folderPathArray[0] ?? '') }}" placeholder="{{ __('app.enter_value') }}">
             </div>
         </div>
 
@@ -67,7 +71,7 @@
 
         <div class="col-md-12">
             <div class="form-group mb-3">
-                <label class="form-label">{{ __('app.dossier_title') }}</label>
+                <label class="form-label">{{ __('app.dossier_title') }}<span class="text-danger">*</span></label>
                 <input type="text" class="form-control" name="dossier_title" value="{{ $judgment->dossier_title }}" placeholder="{{ __('app.enter_value') }}">
             </div>
         </div>
