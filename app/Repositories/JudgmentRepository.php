@@ -94,7 +94,7 @@ class JudgmentRepository extends BaseRepository
                         'name',
                         'description',
                         'physical_condition_id',
-                        'old_agency_id',
+                        'agency_name',
                         'document_number',
                         'document_notation',
                         'issue_date',

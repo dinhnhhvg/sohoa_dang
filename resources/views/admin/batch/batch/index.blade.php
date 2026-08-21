@@ -27,7 +27,7 @@
                                     <button type="button" class="btn btn-primary me-2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ __('app.advanced') }}</button>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="javascript:void(0)" data-localStorage-name="adminBatches" onclick="showHideShowColumn(this)">{{ __('app.hide_show_column') }}</a>
-                                        <a class="dropdown-item" href="javascript:void(0)" onclick="commonExport('{{ route('admin.batch.export') }}', this)">{{ __('app.export_excel') }}</a>
+                                        <a class="dropdown-item d-none" href="javascript:void(0)" onclick="commonExport('{{ route('admin.batch.export') }}', this)">{{ __('app.export_excel') }}</a>
                                     </div>
                                     <button type="button" class="btn btn-primary is-search-button" onclick="changeIsSearch(this)"></button>
                                 </div>

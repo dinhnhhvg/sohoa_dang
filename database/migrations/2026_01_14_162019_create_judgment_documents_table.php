@@ -30,6 +30,7 @@ return new class extends Migration
 
             $table->foreignId('agency_id')->nullable()->constrained('agencies')->nullOnDelete()->comment('Tòa án ban hành');
             $table->foreignId('old_agency_id')->nullable()->constrained('old_agencies')->nullOnDelete()->comment('Tòa án ban hành');
+            $table->text('agency_name')->nullable()->comment('Cơ quan tổ chức');
 
             // Thông tin chi tiết văn bản
             $table->string('document_number')->nullable()->comment('Số của văn bản');

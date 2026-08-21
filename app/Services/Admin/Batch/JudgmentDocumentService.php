@@ -127,11 +127,6 @@ class JudgmentDocumentService extends BaseService
         $data['retentionPeriods'] = $this->configRepository->getByModule('retention_period');
         $data['fonts'] = $this->configRepository->getByModule('font');
 
-        if ($judgment->is_after_merge) {
-            $data['agencies'] = $this->agencyRepository->get();
-        } else {
-            $data['oldAgencies'] = $this->oldAgencyRepository->get();
-        }
         return $data;
     }
 

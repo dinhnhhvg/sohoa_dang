@@ -5,14 +5,7 @@
         <div class="col-md-12">
             <div class="form-group mb-3">
                 <label class="form-label">{{ __('app.agency') }}</label>
-                <select class="form-select select2 mb-2" name="old_agency_id" data-placeholder="{{ __('app.select_agency') }}">
-                    @php $old_agency_id = $judgmentDocument->old_agency_id ?: $judgmentDocument->judgment->batch->old_agency_id @endphp
-                    @foreach($oldAgencies as $oldAgency)
-                        <option value="{{ $oldAgency->id }}" {{ $old_agency_id == $oldAgency->id ? 'selected' : '' }}>
-                            {{ renderCodeName($oldAgency) }}
-                        </option>
-                    @endforeach
-                </select>
+                <textarea class="form-control" name="agency_name" rows="2" placeholder="{{ __('app.entry') }}">{{ $judgmentDocument->agency_name }}</textarea>
             </div>
         </div>
 

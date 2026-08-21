@@ -78,7 +78,7 @@ class DangExport extends BaseExport
             $judgment->judgment_documents_count,
             numberFormat($judgment->sheets_sum),
             numberFormat($judgment->pages_sum),
-            renderCodeName($row->oldAgency),
+            $row->agency_name,
             $row->document_number,
             $row->document_notation,
             $row->issue_date?->format('d-m-Y'),

@@ -107,7 +107,7 @@
                         <i class="fas fa-heart"></i>
                     </a>
                 </td>
-                <td class="text-nowrap">{{ renderCodeName($jd->oldAgency) }}</td>
+                <td class="text-nowrap">{{ $jd->agency_name }}</td>
                 <td class="text-center">{{ $jd->document_number }}</td>
                 <td class="text-center">{{ $jd->document_notation }}</td>
                 <td class="text-center text-nowrap">{{ $jd->issue_date?->format('d-m-Y') }}</td>
