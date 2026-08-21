@@ -1,6 +1,8 @@
 <?php
 
 return array (
+    'save_all' => 'Lưu lại toàn bộ',
+    'dang' => 'Đảng',
     'tenure_period' => 'Nhiệm kỳ',
   'retention_period' => 'Thời hạn bảo quản',
   'font' => 'Phông',
